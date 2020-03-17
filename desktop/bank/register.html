@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Register
+    </title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        body {
+
+            background-color: rgb(214, 214, 214);
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container-fluid p-0">
+
+
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+
+            <a class="navbar-brand" href="home.html">ULALA BANK</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+
+            <div class="collapse navbar-collapse " id="collapsibleNavbar">
+                <div class="navbar-nav ">
+                    <div class="nav-item">
+                        <a class="nav-link" href="loanreq.html">Loan Request</a>
+                    </div>
+
+                    <div class="nav-item">
+                        <a class="nav-link" href="emicalc.html">EMI Calculator</a>
+                    </div>
+
+                    <div class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </div>
+
+                    <div class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="container">
+
+            <form onsubmit="myFunction()">
+                <div class="form my-5"
+                    style=" width: 70%; border-style:groove; margin: auto;  background-color: rgb(152, 231, 255);">
+
+                    <h2 class="text-capitalize text-center" style="color: rgb(255, 0, 0);">register</h2>
+
+                    <div class="fname pt-2 px-4">
+                        <label for="fname">Full Name:&nbsp;</label>
+                        <input type="text" class="form-control" name="fname" required placeholder="Full name">
+                    </div>
+
+                    <div class="gender pt-2 px-4">
+                        <label for="gender">Gender:&nbsp;</label>
+                        <label><input type="radio" class="" name="gender" value="Male">Male
+                            <input type="radio" class="" name="gender" value="Fe-male">Female</label>
+                    </div>
+
+                    <div class="dob pt-2 px-4" style="text-align: left;">
+                        <label for="uname">Date Of Birth:&nbsp;</label>
+                        <input type="date" class="" name="dob" placeholder="DOB">
+                    </div>
+
+                    <div class=" username pt-2 px-4">
+                        <label for="uname">Username:&nbsp;</label>
+                        <input type="uname" class="form-control" name="uname" placeholder="Enter Username" required>
+                    </div>
+
+                    <div class="pwd pt-2 px-4">
+                        <label for="pwd">Password:&nbsp;</label>
+                        <input type="password" class="form-control" name="pwd" placeholder="Enter Password" required>
+                    </div>
+
+                    <div class="pwd1 pt-2 px-4">
+                        <label for="repwd">Re-Enter Password:&nbsp;</label>
+                        <input type="password1" class="form-control" name="pwd1" placeholder="Re-enter Password"
+                            required>
+                    </div>
+
+                    <div class="phone pt-2 px-4">
+                        <label for="phone">Mobile:&nbsp;</label>
+                        <input type="text" class="form-control" name="phone" placeholder="Mobile number" required>
+                    </div>
+
+                    <div class="pan pt-2 px-4">
+                        <label for="pan">Pan Card Number:&nbsp;</label>
+                        <input type="text" class="form-control" name="phone" placeholder="Pan-Card number" required>
+                    </div>
+
+                    <div class="address pt-2 px-4">
+                        <label for="add">Address:&nbsp;</label>
+                        <textarea class="form-control" aria-label="With textarea" placeholder="Address"
+                            required></textarea>
+                    </div>
+
+                    <div class="form-check pt-2  px-4">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" class="form-check-input px-4" id="terms"
+                            required>
+                        <label class="form-check-label" for="terms"> I Agree Terms And Conditions</label>
+                    </div>
+
+                    <div class="register pt-2 pb-2 px-4">
+                        <button class="btn btn-danger btn-md btn-block text-capitalize"
+                            style="font-size: 20px;">Register</button>
+                    </div>
+
+                    <div class="login text-center">
+                        <label for="login" style="color: rgb(255, 0, 0); font-size: 20px;">Do you
+                            have
+                            already account?
+                            login <a href="login.html">here</a> </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            alert("Register successfull");
+        }
+    </script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

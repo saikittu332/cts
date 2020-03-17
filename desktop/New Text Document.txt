@@ -1,0 +1,86 @@
+String buffer methods:
+
+
+package demo;
+
+public class strrev {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		StringBuffer str1 = new StringBuffer("java programming");
+		StringBuffer str2 = new StringBuffer("training");
+		StringBuffer str3 = new StringBuffer("sspdlcenter");
+		
+		
+		// str1.reverse();
+		String temp = "";
+		int length = str1.length();
+		for(int i=length-1;i>=0;i--)
+		{
+			temp = temp+str1.charAt(i);
+		}
+		
+		System.out.println(str1);
+		System.out.println(temp);
+		
+		System.out.println(str2.charAt(4));
+		System.out.println(str3.charAt(4));
+		System.out.println(str3.length());
+		
+		System.out.println(String.format("value is %s", "hello"));
+		System.out.println(String.join("", "hello","str2"));
+		
+		//String[] s1 = str1.split("");
+		System.out.println(str3.capacity());
+		System.out.println(str2.append("greatday"));
+		System.out.println(str2.delete(0, 6));
+		
+		
+		
+	}
+
+}
+
+
+
+
+String methods:
+
+
+
+package demo;
+
+public class strdemo1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String str1 = new String("java");
+		String str2 = "programming";
+		
+		//join operation in string
+		System.out.println(String.join(" ", str1,str2));
+		String str3 = String.join(" ", str1,str2);
+		
+		//split
+		String[] str4 = str3.split(" ");
+		
+		for(String s: str4) {
+			System.out.println(s);
+		}
+		//replace
+		String str5 = "worldclass" ;
+		System.out.println(str5.replace("d", "c"));
+		
+		//trim
+		System.out.println(str3.trim());
+		
+		//index
+		System.out.println(str3.indexOf('a'));
+		System.out.println(str3.lastIndexOf('a'));
+		System.out.println(str3.indexOf('m',13));
+		
+		
+	}
+
+}

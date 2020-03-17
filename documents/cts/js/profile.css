@@ -1,0 +1,94 @@
+.profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+.image{
+    text-align: center;
+}
+.image img{
+    width: 70%;
+    height: 100%;
+}
+.image .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+.image .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+
+.courses a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.details h5{
+    color: rgb(121, 121, 121);
+}
+.details h6{
+    color: #2b91ff;
+}
+.edit{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: #5c6063;
+    cursor: pointer;
+}
+.ranking{
+    font-size: 12px;
+    color: #b6b6b6;
+    margin-top: 5%;
+}
+.ranking span{
+    color: #383c41;
+    font-size: 15px;
+    font-weight: 600;
+}
+.details .tab{
+    margin-bottom:5%;
+}
+.details .tab .nav-link{
+    font-weight:600;
+    border: none;
+}
+.details .tab .nav-link.active{
+    border: none;
+    border-bottom:2px solid #0b4d94;
+}
+.courses{
+    padding: 14%;
+    margin-top: -15%;
+}
+.courses p{
+    font-size: 12px;
+    color: #49494d;
+    font-weight: 600;
+    margin-top: 10%;
+}
+
+.courses ul{
+    list-style: none;
+}
+.profile-tab label{
+    font-weight: 600;
+}
+.profile-tab p{
+    font-weight: 600;
+    color: #0b4d94;
+}

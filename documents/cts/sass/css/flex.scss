@@ -1,0 +1,31 @@
+#a{
+    border-left: ghostwhite;
+}
+
+li:hover{
+    background-color: lightgrey;
+}
+
+li{
+    border-right: lightgrey 1px solid;
+     
+}
+
+li:nth-last-child(1){
+    border: 0px;
+}
+
+
+
+
+#b{
+    padding-top: 80px;
+    margin: auto;
+    background-image: url(C:/Users/Dell/Downloads/4.jpg);
+    height: 300px;
+}
+#c{
+    
+    margin: auto;
+    margin-top: 10px;
+}

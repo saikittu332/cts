@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Loan Request</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        body {
+
+            background-color: rgb(214, 214, 214);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container  col-md-6 m-auto">
+        <form onsubmit="myFunction()">
+            <div class="form my-5"
+                style=" width: 70%; border-style:groove; margin: auto;  background-color: rgb(152, 231, 255);">
+
+                <h2 class="text-capitalize text-center" style="color: rgb(255, 0, 0);">Loan Request Form</h2>
+
+                <p class="px-4 text-capitalize text-center">Fill In The Form To request for Loan And to generate
+                    application ID to
+                    track the status.
+                </p>
+
+
+                <div class="fname pt-2 px-4">
+                    <label for="uname">Full Name:&nbsp;</label>
+                    <input type="text" class="form-control" name="fname" placeholder="Full name" required>
+                </div>
+
+                <div class="phone pt-2 px-4">
+                    <label for="phone">Mobile:&nbsp;</label>
+                    <input type="text" class="form-control" name="phone" placeholder="Mobile number" required>
+                </div>
+
+                <div class="pan pt-2 px-4">
+                    <label for="pan">Pan Card Number:&nbsp;</label>
+                    <input type="text" class="form-control" name="phone" placeholder="Pan-Card number" required>
+                </div>
+
+                <div class="amount input-group pt-2 px-4">
+
+                    <label for="amount" class="m-auto">Required Loan Amount:&nbsp;</label>
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                    </div>
+                    <input type="number" class="form-control">
+                </div>
+
+                <div class="tenure input-group pt-2  px-4">
+                    <label for="tenure" class="m-auto ">Tenure:&nbsp;</label>
+                    <input type="number" value="1" class="form-control">
+                    <div class="input-group-append">
+                        <span class="input-group-text">Years</span>
+                    </div>
+                </div>
+
+                <div class="Purpose input-group py-2 px-4">
+                    <label for="purpose">Purpose:&nbsp;</label>
+
+                    <textarea class="form-control  w-100" aria-label="With textarea"
+                        placeholder="Reason For Opting Loan" required></textarea>
+
+                </div>
+
+                <div class="submit pt-2 pb-2 px-4">
+                    <button class="btn btn-danger btn-md btn-block text-capitalize"
+                        style="font-size: 20px;">Submit</button>
+                </div>
+        </form>
+    </div>
+
+
+    <script>
+        function myFunction() {
+            var digits = Math.floor(Math.random() * 80000000000) + 10000000000;
+            alert("Request is submitted successfully, your application id is " + digits);
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

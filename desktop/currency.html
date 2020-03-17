@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Currency Converter</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="amount">
+        <input
+          class="form-control w-50"
+          type="number"
+          placeholder="Enter Amount"
+          id="amount"
+        />
+      </div>
+
+      <select id="from">
+        <option>INR</option>
+        <option>USD</option>
+        <option>CAD</option>
+        <option>JPY</option>
+      </select>
+
+      <i class="fa fa-arrows-h" aria-hidden="true"></i>
+
+      <select id="to">
+        <option>INR</option>
+        <option>USD</option>
+        <option>CAD</option>
+        <option>JPY</option>
+      </select>
+
+      <button
+        class="btn calculate-btn btn-primary mb-2"
+        onclick="convertCurrency()"
+      >
+        Show me the result!
+      </button>
+
+      <div class="result">
+        <input
+          class="form-control w-50"
+          type="textbox"
+          placeholder="Result"
+          id="result"
+        />
+      </div>
+    </div>
+
+    <script>
+      var currency = {
+        INR: { CAD: 0.0186126001, JPY: 1.5054550041, USD: 0.0138449896 },
+        USD: { CAD: 1.3443563815, INR: 72.228295527, JPY: 108.7364489387 },
+        CAD: { CAD: 1.0, INR: 53.7270447923, USD: 0.7438503761 },
+        JPY: { CAD: 0.0123634383, INR: 0.6642510054, USD: 0.0091965483 }
+      };
+
+      var btn = document.querySelector(".calculate-btn");
+
+      var fromCurrencyInput = document.getElementById("from");
+
+      var toCurrencyInput = document.getElementById("to");
+
+      var amountInput = document.getElementById("amount");
+
+      var toShowResult = document.getElementById("result");
+
+      function convertCurrency() {
+        // event.preventDefault();
+        var amount = amountInput.value;
+        var from = fromCurrencyInput.value;
+        var to = toCurrencyInput.value;
+        var result = 0;
+
+        try {
+          if (from == to) {
+            result = amount;
+          } else {
+            result = amount * currency[from][to];
+          }
+        } catch (err) {
+          result = amount * (1 / currency[to][from]);
+        }
+
+        // toShowAmount.innerHTML = amount;
+        // toShowBase.textContent = from + " = ";
+        // toShowSecond.textContent = to;
+        // toShowResult.textContent = result;
+      }
+
+      //   btn.addEventListener("click", convertCurrency);
+    </script>
+  </body>
+</html>

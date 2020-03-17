@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Currency Converter</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <u
+        ><h2 class="text-center my-5" style="color: #d1124b;">
+          Currency Calculator
+        </h2></u
+      >
+      <div class="m-auto" style="width: 300px;">
+        <input
+          type="number"
+          class="form-control"
+          id="amount"
+          placeholder="Enter Amount"
+          value="0"
+        />
+      </div>
+      <div class="row">
+        <div class="col-md-4"></div>
+
+        <div class=" col-md-2 m-4">
+          <label class="" style="font-family: sans-serif; font-size:1rem;"
+            >From
+          </label>
+
+          <div class="">
+            <select
+              class="form-control"
+              style="width: 100px;"
+              id="from"
+              required
+            >
+              <option>CAD</option>
+              <option>HKD</option>
+              <option>ISK</option>
+              <option>PHP</option>
+              <option>DKK</option>
+              <option>HUF</option>
+              <option>CZK</option>
+              <option>GBP</option>
+              <option>RON</option>
+              <option>SEK</option>
+              <option>IDR</option>
+              <option>INR</option>
+              <option>BRL</option>
+              <option>RUB</option>
+              <option>HRK</option>
+              <option>JPY</option>
+              <option>THB</option>
+              <option>HRK</option>
+              <option>CHF</option>
+              <option>EUR</option>
+              <option>MYR</option>
+              <option>BGN</option>
+              <option>TRY</option>
+              <option>CNY</option>
+              <option>NOK</option>
+              <option>CNY</option>
+              <option>NZD</option>
+              <option>ZAR</option>
+              <option>USD</option>
+              <option>MXN</option>
+              <option>SGD</option>
+              <option>AUD</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- <div class="col-md-1 m-4">
+          <button><i class="fa fa-arrows-h" aria-hidden="true"></i></button>
+        </div> -->
+
+        <div class="col-md-2 m-4">
+          <label class="" style="font-family: sans-serif; font-size:1rem;"
+            >To
+          </label>
+
+          <div class="">
+            <select class="form-control" style="width: 100px;" id="to" required>
+              <option>CAD</option>
+              <option>HKD</option>
+              <option>ISK</option>
+              <option>PHP</option>
+              <option>DKK</option>
+              <option>HUF</option>
+              <option>CZK</option>
+              <option>GBP</option>
+              <option>RON</option>
+              <option>SEK</option>
+              <option>IDR</option>
+              <option>INR</option>
+              <option>BRL</option>
+              <option>RUB</option>
+              <option>HRK</option>
+              <option>JPY</option>
+              <option>THB</option>
+              <option>HRK</option>
+              <option>CHF</option>
+              <option>EUR</option>
+              <option>MYR</option>
+              <option>BGN</option>
+              <option>TRY</option>
+              <option>CNY</option>
+              <option>NOK</option>
+              <option>CNY</option>
+              <option>NZD</option>
+              <option>ZAR</option>
+              <option>USD</option>
+              <option>MXN</option>
+              <option>SGD</option>
+              <option>AUD</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+
+      <div class=" " style="padding-left: 425px;">
+        <button
+          class="btn calculate btn-success  btn-block w-50"
+          style="text-align: center;"
+        >
+          Calculate
+        </button>
+      </div>
+
+      <div class="result m-3">
+        <b>
+          <p class="text-center" style="color: rgb(140, 35, 226);">
+            <span class="given-amount"></span>
+            <span class="base-currency"></span>
+            <span class="final-result"></span>
+            <span class="second-currency"></span></p
+        ></b>
+      </div>
+    </div>
+
+    <script src="../Desktop/exam1.js"></script>
+  </body>
+</html>

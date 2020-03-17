@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <title>Registration Page</title>
+</head>
+
+<body>
+    <h2 style="text-align: center;">Welcome to Registration Page</h2>
+    <div align="center">
+        <form style="background-color: lightcoral; width: 50%;">
+
+            <label for="fullname">Full Name: </label>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="text" placeholder="your fullname" required autofocus>
+            <br>
+            <br>
+
+            <label for="gender">Gender: </label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="gender" value="male" checked><label>Male</label>
+            <input type="radio" name="gender" value="female"><label>Female</label>
+            <br>
+            <br>
+
+            <label for="dob">Date Of Birth: </label> &nbsp;
+            <input type="date" value="dob" required>
+            <br>
+            <br>
+
+            <label for="username">Username: </label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="text" placeholder="choose username" required>
+            <br>
+            <br>
+
+            <label for="password">Password: </label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="password" placeholder="choose password" required>
+            <br>
+            <br>
+
+            <label for="repassword">Re-Password: </label> &nbsp; &nbsp; &nbsp;
+            <input type="password" placeholder="re-enter password" required>
+            <br>
+            <br>
+
+            <label for="mobile">Mobile Number: </label>&nbsp;
+            <input type="text" placeholder="enter mobile number" required>
+            <br>
+            <br>
+
+            <label for="emaail">E-Mail: </label>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="email" placeholder="enter email" required>
+            <br>
+            <br>
+
+            <label for="address">Address: </label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <textarea placeholder="Enter Address"></textarea>
+            <br>
+            <br>
+
+            <label for="pincode">pincode: </label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="text" name="pincode" pattern="[0-8]{6}" title="type 6 digit pincode"
+                placeholder="Enter Pincode"></textarea>
+            <br>
+            <br>
+
+            <input type="checkbox" checked required>
+            <label for="terms">I Agree Terms And Conditions</label>
+            <br>
+            <br>
+
+            <label for="country">Country: </label>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+            <input id="countryname" name="countryname" type="text" list="country" placeholder="select country" required>
+            <datalist id="country">
+                <option value="india"></option>
+                <option value="america"></option>
+                <option value="canada"></option>
+            </datalist>
+            <br>
+            <br>
+
+            <label for="search">Search: </label> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+            <input id="mysearch" type="search" placeholder="Search">
+            <br>
+            <br>
+
+            <label for="numbercount">Number: </label> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input id="" type="number" min="5" max="20" step="5" value="">
+            <br>
+            <br>
+
+            <input id="test" type="range">
+            <br>
+            <br>
+
+            <input type="submit" value="Register">
+
+            <p>Click <a href="login.html">here </a>to login</p>
+
+
+        </form>
+    </div>
+</body>
+
+</html>
+
+
+<style>
+    form {
+
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        border-radius: 10%;
+        opacity: 0.8;
+        /* margin: auto; */
+    }
+
+    body {
+        background-image: url("bike.jpg");
+        width: 100%;
+    }
+</style>

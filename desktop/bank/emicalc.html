@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Loan Management System</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    <style>
+        body {
+            background-color: rgb(214, 214, 214);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+
+        #wrapper {
+            border: 1px solid #000;
+            padding-bottom: 20px;
+            margin-top: 10%;
+
+        }
+
+        table {
+            padding-left: 100px;
+            padding-right: 200px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="container-fluid p-0 ">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+
+            <a class="navbar-brand" href="home.html">ULALA BANK</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+
+            <div class="collapse navbar-collapse " id="collapsibleNavbar">
+                <div class="navbar-nav ">
+                    <div class="nav-item">
+                        <a class="nav-link" href="loanreq.html">Loan Request</a>
+                    </div>
+
+                    <div class="nav-item">
+                        <a class="nav-link" href="emicalc.html">EMI Calculator</a>
+                    </div>
+
+                    <div class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </div>
+
+                    <div class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+
+
+        <div class="container mt-5 ">
+            <div id="wrapper" class="col-lg-4 m-auto" style="background-color: rgb(152, 231, 255);">
+
+                <h3 class="text-center mb-4" style="color: rgb(255, 0, 0);">EMI Calculator</h3>
+
+
+
+                <table width="95%">
+                    <tr>
+                        <td width="147"> Loan Amount </td>
+                        <td width="193"> <input type="text" id="prncipleAmount" name="prncipleAmount" required
+                                class="form-control" placeholder="Enter Loan Amount" required /> </td>
+                    </tr>
+                    <tr>
+                        <td> Interest Rate </td>
+                        <td width="193" class="pt-3"> <input type="text" id="InterestRate" name="InterestRate" required
+                                class="form-control" placeholder="Enter Rate of Interest" required /> </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Loan Period (in month)
+                        </td>
+                        <td class="pt-3">
+                            <input type="text" id="emiMonth" name="emiMonth" required class="form-control"
+                                placeholder="Enter Period in Month" required />
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="pt-3" colspan="2">
+                            <button class="btn btn-success btn-block" onclick="EmiCalculaor();"> Find EMI </button>
+                        </td>
+                    </tr>
+                </table>
+
+
+                <div id="result" style="color:#006;margin-top:20px;"> </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <script>
+        function EmiCalculaor() {
+
+
+            var month = $("#emiMonth").val();
+            var rate = $("#InterestRate").val();
+            var pamt = $("#prncipleAmount").val();
+
+            var monthlyInterestRatio = (rate / 100) / 12;
+            var monthlyInterest = (monthlyInterestRatio * pamt);
+            var top = Math.pow((1 + monthlyInterestRatio), month);
+            var bottom = top - 1;
+            var sp = top / bottom;
+            var emi = ((pamt * monthlyInterestRatio) * sp);
+            var result = emi.toFixed(2);
+            var totalAmount = emi * month;
+            var yearlyInteret = totalAmount - pamt;
+            var downPayment = pamt * (20 / 100);
+            $("#result").empty();
+            $("#result").append("Your EMI = " + result);
+
+        }
+    </script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

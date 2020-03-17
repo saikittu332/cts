@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            selectors
+        </title>
+        <link href="styles.css" rel="stylesheet">
+
+        <style>
+            p{
+                background-color: lightcoral;
+            }
+
+            #second{
+                background-color: lightyellow;
+            }
+
+            .fourth{
+                background-color: magenta;
+            }
+
+            p[name=third]{
+                background-color: maroon;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <p style="background-color: lightgreen
+            ;"> this is the first paragraph</p>
+            <div>
+                <p id="second">this is the second paragraph</p>
+            </div>
+        </div>
+        
+        <p name="third">
+            this is the third paragraph
+        </p>
+
+        <div>
+            <p class=fourth>this is the fourth paragraph</p>
+            <p>this is the fifth paragraph</p>
+        </div>
+    </body>
+</html>

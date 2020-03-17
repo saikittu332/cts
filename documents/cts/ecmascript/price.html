@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row my-3">
+            <div class="col-md-3 m-auto">
+                <img src="bike.jpg" width="150px" height="100px">
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="row">
+                    <h4>Product</h4>
+                </div>
+                <div class="row">
+                    <p>Harley Iron 883</p>
+                </div>
+
+
+            </div>
+
+
+            <div class="col-md-2">
+                <div class="row">
+                    <h5>Price</h5>
+                </div>
+                <div class="row">
+                    <p id="price">1000.00</p>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="row">
+                    <h5>Quantity</h5>
+                </div>
+
+                <div class="row">
+                    <button type="button" class="btn btn-success" onclick="increment()">+</button>&nbsp;
+                    <label value="0" id="s" style="border: solid black; width: 40px;">0</label>&nbsp;
+                    <button type="button" class="btn btn-danger" id='btn1' onclick="decrement()">-</button>
+                </div>
+            </div>
+
+
+            <div class="col-md-2">
+                <div class="row">
+                    <h5>Total Price</h5>
+                </div>
+                <div class="row">
+                    <p>
+                        <p id="tot"></p>.00
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <script>
+        var val = document.getElementById('s').textContent;
+        var price = parseInt(document.getElementById('price').textContent)
+        var total = 0
+
+
+        function increment() {
+            document.getElementById('btn1').disabled = false;
+            val++;
+            document.getElementById('s').textContent = val;
+            total = total + price
+            document.getElementById('tot').textContent = total
+        }
+        function decrement() {
+            if (val == 0) {
+                document.getElementById('btn1').disabled = true;
+                document.getElementById('tot').textContent = 0
+            }
+            else {
+                val--;
+                document.getElementById('s').textContent = val;
+                total = total - price
+                document.getElementById('tot').textContent = total
+                if (val == 0) {
+                    document.getElementById('btn1').disabled = true;
+                    document.getElementById('tot').textContent = 0
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

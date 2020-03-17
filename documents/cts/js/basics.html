@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+
+    <p id="p1">hello sai</p>
+
+
+  <!--mouse events -->  <!-- inline js -->
+    <button onclick="alert('hello world')">on click</button>
+
+    <button onclick="display()">click me</button>
+    <button oncontextmenu="alert('right clicked')">right click</button>
+    <button onmouseover="alert('mouse hover')">hover</button>
+    <button onmouseout="alert('mouse out')">out</button>
+
+    <!--keyboard events -->
+
+    <input type=text onkeydown="alert('key down')" />
+    <input type=text onkeyup="alert('key up')" />
+     <input type=text onkeypress="alert('key press')" />     <!-- ctrl,shift,alt,esc, arrow keys -->
+
+
+
+    <!-- external js -->
+    <script src="basics.js"></script>
+
+
+    <!-- embedded -->
+    <script>
+        var x = 10;
+        console.log(x);
+    </script>
+
+</body>
+
+</html>
